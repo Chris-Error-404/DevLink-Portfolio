@@ -1,6 +1,6 @@
 
 /* using work-sans form goolge fonts */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* reset */
 *{
@@ -24,11 +24,10 @@ html{
 }
 
 body{
-    font-family:'Work-Sans', system-ui, -apple-system;/* it will check/ use the user's browser default/system font if 'work sans fails to load */
+    font-family:'Poppins', system-ui, -apple-system;/* it will check/ use the user's browser default/system font if 'work sans fails to load */
     font-size: 1em; /* default font size set to 16px */
     line-height: 1.5;
     background-color: var(--white);
-    min-height: 150vh;
     transition: var(--transition);
 }
 
@@ -72,7 +71,7 @@ section{
 
 /* logo */
 .navbar .container .logo{
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: 700;
     color: var(--black);
     transition: var(--transition);
@@ -147,6 +146,7 @@ section{
 /* end HERO */
 
 
+
 /* SKILLS */
 #skills .container{
     padding: 1em;
@@ -186,6 +186,7 @@ section{
 /* end SKILLS */
 
 
+
 /* PROJECTS */
 #projects .container{
     padding: 1em;
@@ -203,7 +204,11 @@ section{
     padding: 1em 1.5em;
     transition: var(--transition);
 }
-#projects .container .projects-container .project-box:hover{
+
+/*priject box states*/
+#projects .container .projects-container .project-box:hover,
+#projects .container .projects-container .project-box:active,
+#projects .container .projects-container .project-box:focus{
     background-color: var(--primary-color);
 }
 
@@ -219,4 +224,98 @@ section{
 
 #projects .container .projects-container .project-box .description{
     display: none;
+}
+/*end PROJECTS */
+
+
+
+/* Contact */
+#contact .container{
+    padding: 1em;
+}
+
+#contact .container .contact-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:start;
+    gap: 2em;
+}
+
+#contact .container .contact-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#contact .container .contact-container input,
+#contact .container .contact-container textarea{
+    padding: 1em 1em;
+    outline: none;
+    border: 1px solid var(--black);
+    border-radius: 15px;
+}
+
+#contact .container .contact-container input::placeholder,
+#contact .container .contact-container textarea::placeholder{
+    font-size: 1.1em;
+    padding-left: 0.5em;
+    font-family: 'Poppins';
+}
+#contact .container .contact-container input{
+    min-width: 100%;
+}
+
+
+#contact .container .contact-container .text span{
+    color: var(--primary-color);
+}
+
+#contact .container .contact-container .text p{
+    margin-top: 0.5em;
+}
+
+#contact .container .contact-container .text .links{
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#contact .container .contact-container .text .links i{
+    font-size: 2em;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* link states */
+#contact .container .contact-container .text .links i:hover{
+    color: var(--primary-color);
+}
+/* end CONTACTS */
+
+
+
+/* footer */
+footer{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1em;
+}
+
+footer .container a{
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+/* logo states */
+footer .container a:hover{
+    color: var(--primary-color);
 }
