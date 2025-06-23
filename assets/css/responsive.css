@@ -1,6 +1,48 @@
+/* GNERAL */
+@media(max-width:1024px){
+    section{
+        margin: 2em 0em;
+    }
+}
+
+/* NAVBAR */
 @media (max-width: 1024px){
 
-    .navbar .container ul{
+    /* remove nav-items*/
+    .navbar .container .nav-items{
+       display: none;
+    }
+
+    .navbar .container i.fa-bars{
+        display: block;
+    }
+
+    /* remove  theme-icon*/
+    .navbar .container i.fa-moon{
         display: none;
+    }
+}
+
+/* HERO */
+@media (max-width:1024px){
+
+    #hero .container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+    }
+}
+
+/* SKILLS */
+@media (max-width:1024px){
+    #skills .container .skills-container {
+        flex-direction: column;
+    }
+
+    #skills .container .skills-container span{
+        min-width: 100%;
+    }
+    #skills .container .skills-container span:hover{
+        background-color: var(--white);
+        transform: scale(1);
     }
 }

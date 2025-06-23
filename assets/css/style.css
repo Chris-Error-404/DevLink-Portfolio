@@ -16,14 +16,7 @@
     --black: #1a1a1a;
     --primary-color: #63d3ff;
     --transition: all 0.2s ease;
-}
-
-a{
-    text-decoration: none; /* removes underline decoration for all links*/
-}
-
-ul,li{
-    list-style-type: none; /* removes list style from all ul */
+    --header-bottom-spacing: 0.5em;
 }
 
 html{
@@ -31,9 +24,25 @@ html{
 }
 
 body{
-    font-family:'Work-Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* it will check/ use the user's browser default/system font */
-    font-size: 1em; /* default font sixe set to 16px */
+    font-family:'Work-Sans', system-ui, -apple-system;/* it will check/ use the user's browser default/system font if 'work sans fails to load */
+    font-size: 1em; /* default font size set to 16px */
+    line-height: 1.5;
     background-color: var(--white);
+    min-height: 150vh;
+    transition: var(--transition);
+}
+
+a{
+    color: var(--black);
+    text-decoration: none; /* removes underline decoration for all links*/
+}
+
+ul,li{
+    list-style-type: none; /* removes list style from all ul */
+}
+
+section{
+    margin: 4em 0em;
 }
 
 /* Utilities*/
@@ -42,28 +51,43 @@ body{
     margin: 0 auto; /* margint top & bottom 0 - left &Right auto */
 }
 
+.section-heading{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
 
-/* navbar */
+.section-heading span {
+    color: var(--primary-color);
+}
+
+
+/* NAVBAR */
 .navbar .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5em 1em;
+    background-color: var(--white);
 }
 
 /* logo */
 .navbar .container .logo{
     font-size: 1.4em;
     font-weight: 700;
+    color: var(--black);
+    transition: var(--transition);
+}
+.navbar .container .logo:hover{
+    color: var(--primary-color);
 }
 
-.navbar .container ul{
+.navbar .container .nav-items{
     display: flex;
     gap: 1.5em;
 }
 
 /* link styling */
-.navbar .container a{
+.navbar .container .nav-items a{
     color: var(--black);
     transition:  var(--transition);
 }
@@ -85,8 +109,10 @@ body{
 /* will be set to display show on mobile view */
 .navbar .container i.fa-bars{
     display: none;
+    font-size: 1.5em; /* difffernt size from moon*/
 }
 
+/* theme icon*/
 .navbar .container i.fa-moon{
     border: 1px solid var(--black);
     padding: 0.5em 0.6em;
@@ -97,5 +123,100 @@ body{
     background-color: var(--primary-color);
 }
 
+/* end NAVBAR */
 
 
+
+/* HERO */
+#hero .container {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+#hero .container .grid-child h2{
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.1em;
+    max-width: fit-content;
+    margin-bottom: 0.5em;
+}
+#hero .container .grid-child a{
+    text-decoration: underline;
+}
+/* end HERO */
+
+
+/* SKILLS */
+#skills .container{
+    padding: 1em;
+}
+
+/* flex container for the skills */
+#skills .container .skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1em;
+}
+
+#skills .container .skills-container span{
+    color: var(--black); /* to override styling form the container */
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--black);
+    max-width: fit-content;
+    height: auto;
+    padding: 0.8em 1.2em;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+#skills .container .skills-container span:hover{
+    background-color: var(--primary-color);
+    /* transform: scale(1.1); */
+}
+
+#skills .container .skills-container i{
+    font-size: 2em;
+}
+/* end SKILLS */
+
+
+/* PROJECTS */
+#projects .container{
+    padding: 1em;
+}
+
+#projects .container .projects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+#projects .container .projects-container .project-box{
+    border: 1px solid var(--black);
+    border-radius: 50px;  /* 30px open */
+    padding: 1em 1.5em;
+    transition: var(--transition);
+}
+#projects .container .projects-container .project-box:hover{
+    background-color: var(--primary-color);
+}
+
+#projects .container .projects-container .project-box .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#projects .container .projects-container .project-box .heading i{
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#projects .container .projects-container .project-box .description{
+    display: none;
+}
