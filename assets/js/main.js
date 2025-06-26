@@ -45,7 +45,7 @@ checkboxes.forEach(cb => {
 
 
 //SKILSS CAROUSEL SCRIPT
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('#skills .skills-container');
   
     // Clone children for seamless looping
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.addEventListener('mouseleave', () => {
       container.style.animationPlayState = 'running';
     });
-  });
+  }); */
 
 
 

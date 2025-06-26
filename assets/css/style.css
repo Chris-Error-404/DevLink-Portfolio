@@ -93,6 +93,8 @@ body{
 
     /* requirements for ::before animation */
     position: relative;
+
+    transition: 0.1s ease;
 }
 /* background image animation */
 body::before {
@@ -275,7 +277,57 @@ nav.navbar.scrolled {
 
 
 
+
 /* SKILLS */
+#skills .container .skills-container{
+    padding: 1.5em 0em;
+    display: flex;
+    gap: 0.5em;
+    width: max-content;
+    flex-shrink: 0;
+}
+
+#skills .container .skills-container span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: var(--md-font-size);
+    font-weight: 500;
+    border: 1px solid var(--gray);
+    border-radius: 50px;
+    padding: 0.8em 1em;
+    cursor: pointer;
+
+    /* blur/glass effect */
+    background: transparent;
+    -webkit-backdrop-filter: blur(var(--md-blur));
+    backdrop-filter: blur(var(--md-blur));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    transition: var(--default-transition)
+}
+
+/* GLOW EFFECT */
+#skills .container .skills-container span:hover {
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.9), 0 0 40px rgba(0, 123, 255, 0.5);
+}
+
+#skills .container .skills-container span:hover{
+    background-color: var(--black);
+    color: var(--black);
+    border-color: transparent;
+}
+
+#skills .container .skills-container i{
+    font-size: var(--lg-font-size);
+}
+
+
+
+
+
+
 
 /* PROJECTS */
 #projects{
