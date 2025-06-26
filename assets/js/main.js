@@ -114,3 +114,19 @@ submitBtn.addEventListener('click', () => {
     console.log(`your URL is: ${url}`);
     console.log(`your message is: ${message}`)
 })
+
+
+//Bavk to top script
+const topBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300){
+    topBtn.classList.add('show');
+  }else{
+    topBtn.classList.remove('show');
+  }
+
+  topBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  });
+});
