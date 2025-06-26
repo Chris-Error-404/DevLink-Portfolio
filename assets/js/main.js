@@ -130,3 +130,17 @@ window.addEventListener('scroll', () => {
     window.scrollTo({top: 0, behavior: 'smooth'})
   });
 });
+
+
+//fade up script
+const section = document.querySelectorAll('.fade-element');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+     if (entry.isIntersecting) {
+        entry.target.classList.add('view');
+     }
+  });
+});
+
+section.forEach(el => observer.observe(el));

@@ -166,6 +166,16 @@ section{
     color: var(--dark-primary-color);
 }
 
+.fade-element{
+    opacity: 0;
+    transform: translateY(20px)
+}
+
+.fade-element.view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
 /* PSUEDO BODY */
@@ -282,6 +292,8 @@ nav.navbar.scrolled {
 #skills .container .skills-container{
     padding: 1.5em 0em;
     display: flex;
+    align-items: center;
+    justify-content: left;
     gap: 0.5em;
     width: max-content;
     flex-shrink: 0;
@@ -314,7 +326,7 @@ nav.navbar.scrolled {
 }
 
 #skills .container .skills-container span:hover{
-    background-color: var(--black);
+    background-color: var(--primary-color);
     color: var(--black);
     border-color: transparent;
 }
@@ -810,6 +822,7 @@ footer .container a:hover{
     gap: 0.5em;
     color: var(--text-color);
     animation: bounce 1s ease infinite;
+    -webkit-animation: bounce 1s ease infinite;
 
     position:fixed;
     bottom: 50px;
@@ -824,19 +837,14 @@ footer .container a:hover{
 #backToTop.show{
     opacity: 1;
     visibility: visible;
+    transition: var(--default-transition);
 }
 
-@keyframes bounce {
-    0% {
-        margin-bottom: 0px;
-    }
-    50% {
-        margin-bottom: 3px;
-    }
-    100%{
-        margin-bottom: 0px;
-    }
+#backToTop.show:hover{
+    background-color: var(--dark-primary-color);
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.9), 0 0 40px rgba(0, 123, 255, 0.5);
 }
+
 
 /* ANIMATIONS */
 
@@ -852,6 +860,33 @@ footer .container a:hover{
     50%  { -webkit-transform: translate(-50%, -50%) scale(1.1) rotate(180deg); }
     100% { -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg); }
 }
+
+
+/* back to top bounce */
+@keyframes bounce {
+    0% {
+        margin-bottom: 0px;
+    }
+    50% {
+        margin-bottom: 3px;
+    }
+    100%{
+        margin-bottom: 0px;
+    }
+}
+@-webkit-keyframes bounce{
+    0% {
+        margin-bottom: 0px;
+    }
+    50% {
+         margin-bottom: 3px;
+    }
+    100%{
+         margin-bottom: 0px;
+    }
+}
+
+
 
 
 
