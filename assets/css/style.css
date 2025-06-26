@@ -223,11 +223,10 @@ nav.navbar.scrolled {
 .navbar .container .nav-items a{
     font-size: var(--sm-font-size);
     transition: var(--default-transition);
+    cursor: pointer;
 }
 
-.navbar .container .nav-items a:hover,
-.navbar .container .nav-items a:active,
-.navbar .container .nav-items a:focus{
+.navbar .container .nav-items a:hover{
     color: var(--dark-primary-color);
 }
 
@@ -815,7 +814,7 @@ footer .container a:hover{
     -webkit-backdrop-filter: blur(var(--xlg-blur));
     backdrop-filter: blur(var(--xlg-blur));
     padding: 0.8em 1em;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--var-black);
     border-radius: 50px;
     display: flex;
     align-items: center;
