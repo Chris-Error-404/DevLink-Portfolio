@@ -6,15 +6,16 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     -webkit-box-sizing: border-box; /* for safari */
     -moz-box-sizing: border-box; /* for firefox */
+    box-sizing: border-box;
 }
 
 :root{
     --white: #fff;
     --black: #1a1a1a;
     --primary-color: #63d3ff;
+    --dark-primary-color: #00b7ff;
     --transition: all 0.2s ease;
     --header-bottom-spacing: 0.5em;
 }
@@ -28,13 +29,20 @@ body{
     font-size: 1em; /* default font size set to 16px */
     line-height: 1.5;
     background-color: var(--white);
+    color: var(--black);
     transition: var(--transition);
+}
+
+body.dark{ /* theme */
+    background-color: var(--black);
+    color: var(--white);
 }
 
 a{
     color: var(--black);
     text-decoration: none; /* removes underline decoration for all links*/
 }
+
 
 ul,li{
     list-style-type: none; /* removes list style from all ul */
@@ -46,6 +54,7 @@ section{
 
 /* Utilities*/
 .container{
+    overflow: hidden;
     max-width: 1200px;
     margin: 0 auto; /* margint top & bottom 0 - left &Right auto */
 }
@@ -56,17 +65,31 @@ section{
 }
 
 .section-heading span {
-    color: var(--primary-color);
+    color: var(--dark-primary-color);
 }
 
 
 /* NAVBAR */
+.navbar{
+    background-color: var(--white);
+}
+
+.navbar.dark{
+    background-color: var(--black);
+}
+
+.navbar .container .logo.dark{
+    color: var(--white);
+}
+
+.navbar .container .nav-items.dark a{
+    color: var(--white);
+}
 .navbar .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5em 1em;
-    background-color: var(--white);
 }
 
 /* logo */
@@ -122,6 +145,25 @@ section{
     background-color: var(--primary-color);
 }
 
+.overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: 600;
+    width: 80%;
+    border: 1px solid var(--black);
+    padding: 1em;
+    border-radius: 8px;
+}
 /* end NAVBAR */
 
 
@@ -157,7 +199,8 @@ section{
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 1em;
+    padding: 1;
+    gap: 0.5em;
 }
 
 #skills .container .skills-container span{
@@ -193,16 +236,25 @@ section{
 }
 
 #projects .container .projects-container{
-    display: grid;
+/*     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1em; */
+    display: flex;
+    flex-direction: column;
     gap: 1em;
 }
 
 #projects .container .projects-container .project-box{
     border: 1px solid var(--black);
-    border-radius: 50px;  /* 30px open */
+    border-radius: 30px;  /* 30px open */
     padding: 1em 1.5em;
+    width: 100%;
+
     transition: var(--transition);
+}
+
+#projects .container .projects-container .project-box.open-box{
+    background-color: var(--primary-color);
 }
 
 /*priject box states*/
@@ -216,15 +268,52 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 #projects .container .projects-container .project-box .heading i{
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.8em;
 }
 
-#projects .container .projects-container .project-box .description{
-    display: none;
+
+#projects .container .projects-container .project-box .description {
+    max-height: 0;
+    padding-top: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
 }
+
+#projects .container .projects-container .project-box .description.open {
+    min-height: 140px;
+    max-height: 500px;
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+}
+
+#projects .container .projects-container .project-box .description a{
+    display: block;
+    font-weight: 700;
+}
+
+#projects .container .projects-container .project-box .description .other{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+#projects .container .projects-container .project-box .description .other .stack span{
+    font-size: 0.75em;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.6em 1em;
+    border-radius: 50px;
+    
+
+    /* to align the saons in thier cintainer */
+    
+}
+
 /*end PROJECTS */
 
 
@@ -248,12 +337,28 @@ section{
 }
 
 #contact .container .contact-container input,
-#contact .container .contact-container textarea{
+#contact .container .contact-container textarea,
+#contact .container .contact-container button{
+    font-family: 'Poppins';
     padding: 1em 1em;
     outline: none;
     border: 1px solid var(--black);
     border-radius: 15px;
 }
+
+#contact .container .contact-container button{
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.8em 1em;
+    font-family: 'Poppins';
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+#contact .container .contact-container button:hover{
+    background-color: var(--dark-primary-color);
+}
+
 
 #contact .container .contact-container input::placeholder,
 #contact .container .contact-container textarea::placeholder{
@@ -306,6 +411,10 @@ footer .container{
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 1em;
+}
+
+footer .container span{
+    font-size: 0.8em;
 }
 
 footer .container a{
