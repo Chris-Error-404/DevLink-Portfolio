@@ -103,7 +103,7 @@ body::before {
     width: 60svw;
     height: 60svh;
     transform: translate(-50%, -50%);
-    background: url(/assets/img/gradient.png) no-repeat center center;
+    background: url(/img/gradient.png) no-repeat center center;
     background-size: contain;
     z-index: -999;
     opacity: 1;
