@@ -24,14 +24,19 @@ This was a task given to me as part of my Frontend Roadmap Training
 ---
 
 ### Version Control
-- Git
-- GitHub
+- `Git`
+- `GitHub`
 
 ---
 
-### Live
+### Hosting
+The page is hosted on `GitHub` pages 
 
 Want to have a look?
 <a href="https://chris-error-404.github.io/DevLink-Portfolio/">Click Me!</a>
-<br><
+<br>
+
+---
+
+### Loom Video
 <a href = "https://www.loom.com/share/d92cdfe530694b1eba9ac00fa10857d8?sid=783dab83-fda5-4064-bb0e-4877a216a86b">Loom Video</a>
