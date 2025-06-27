@@ -29,7 +29,7 @@
     .navbar .container .logo{
         font-size: var(--lg-font-size);
     }
-    
+
     .navbar .container .nav-items{
         display: none;
     }
@@ -39,6 +39,10 @@
     }
 
     .hamburger{
+        display: block;
+    }
+
+    .overlay{
         display: block;
     }
 
