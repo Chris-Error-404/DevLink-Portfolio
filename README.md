@@ -1,7 +1,7 @@
 # DevLink Portfolio - Interactive Developer Porfile
 
 ### Description:
-This is the week 1 challengeof my frontend web development road map
+This is the week 1 challenge of my frontend web development road map
 
 ---
 
