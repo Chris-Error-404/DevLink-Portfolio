@@ -38,6 +38,7 @@
     /* transitions */
     --default-transition: all 0.2s ease;
     --slow-transition: all 0.3s ease;
+    --slower-transition: all 1s ease;
 
     /* font sizes */
     --sm-font-size: 0.9em; /* sub-texts */
@@ -907,3 +908,15 @@ footer .container a:hover{
 
 
 
+/* EXTRA */
+
+/* section fade-up styling */
+
+section.hidden{
+    opacity: 0;
+    transition: var(--slower-transition);
+}
+
+section.show{
+    opacity: 1;
+}
