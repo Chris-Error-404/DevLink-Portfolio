@@ -1,4 +1,4 @@
-## DevLink Portfolio - Interactive Developer Porfile
+# DevLink Portfolio - Interactive Developer Porfile
 
 ### Description:
 This was a task given to me as part of my Frontend Roadmap Training
