@@ -1,7 +1,7 @@
 # DevLink Portfolio - Interactive Developer Porfile
 
 ### Description:
-This was a task given to me as part of my Frontend Roadmap Training
+This is the week 1 challengeof my frontend web development road map
 
 ---
 
@@ -31,8 +31,8 @@ This was a task given to me as part of my Frontend Roadmap Training
 
 ### Hosting
 The page is hosted on `GitHub` pages 
-
-Want to have a look?
+ 
+Want to have a look? 👉
 <a href="https://chris-error-404.github.io/DevLink-Portfolio/">Click Me!</a>
 <br>
 
