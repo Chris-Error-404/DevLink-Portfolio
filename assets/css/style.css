@@ -217,7 +217,6 @@ nav.navbar.scrolled {
     display: flex;
     align-items: center;
     gap: 1.2em;
-    color: red;
 }
 
 .navbar .container .nav-items a{
