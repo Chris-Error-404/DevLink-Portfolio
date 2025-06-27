@@ -39,4 +39,7 @@ Want to have a look?
 ---
 
 ### Loom Video
-<a href = "https://www.loom.com/share/d92cdfe530694b1eba9ac00fa10857d8?sid=783dab83-fda5-4064-bb0e-4877a216a86b">Loom Video</a>
+
+Here is a Loom Video as a preview 👉
+<a href="https://www.loom.com/embed/3854fdc7714d4e7882c50917c7914870?sid=c125bf99-049c-4b84-a8e4-4c9f20b89d35">Video</a>
+
