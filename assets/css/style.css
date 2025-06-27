@@ -829,6 +829,7 @@ footer .container a:hover{
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
+    transition: var(--default-transition);
     transition: opacity 0.3s ease, visibility 0.3s;
     z-index: 10000;
 }
@@ -864,24 +865,36 @@ footer .container a:hover{
 /* back to top bounce */
 @keyframes bounce {
     0% {
-        margin-bottom: 0px;
+        bottom: 50px;
+    }
+    25%{
+        bottom: 52px;
     }
     50% {
-        margin-bottom: 3px;
+        bottom: 54px;
+    }
+    75%{
+        bottom: 52px;
     }
     100%{
-        margin-bottom: 0px;
+        bottom: 50px;
     }
 }
 @-webkit-keyframes bounce{
     0% {
-        margin-bottom: 0px;
+        bottom: 50px;
+    }
+    25%{
+        bottom: 52px;
     }
     50% {
-         margin-bottom: 3px;
+        bottom: 54px;
+    }
+    75%{
+        bottom: 52px;
     }
     100%{
-         margin-bottom: 0px;
+        bottom: 50px;
     }
 }
 
