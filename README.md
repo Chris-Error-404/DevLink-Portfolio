@@ -43,3 +43,10 @@ Want to have a look? 👉
 Here is a Loom Video as a preview 👉
 <a href="https://www.loom.com/embed/3854fdc7714d4e7882c50917c7914870?sid=c125bf99-049c-4b84-a8e4-4c9f20b89d35">Video</a>
 
+---
+
+### Clone Repo
+
+```bash
+git clone https://Chris-Error-404/DevLink-Portfolio.git
+```
